@@ -1,23 +1,25 @@
 {
- "Shirt": {
-     "id": 1,
-     "name": "shirt",
-     "description": "Product code X7R2OPX",
-     "image": "img/shirt.png",
-     "price": 20
- },
- "Mug": {
-    "id": 2,
-    "name": "mug",
-    "description": "Product code X2G2OPZ",
-    "image": "img/mug.png",
-    "price": 5
-},
-"Cap": {
-    "id": 3,
-    "name": "cap",
-    "description": "Product code X3W2OPY",
-    "image": "img/cap.png",
-    "price": 10
-}
+    "products": [
+        {
+            "id": 1,
+            "name": "Shirt",
+            "description": "Product code X7R2OPX",
+            "image": "../src/img/shirt.png",
+            "price": 20
+        },
+        {
+            "id": 2,
+            "name": "Mug",
+            "description": "Product code X2G2OPZ",
+            "image": "../src/img/mug.png",
+            "price": 5
+        },
+        {
+            "id": 3,
+            "name": "Cap",
+            "description": "Product code X3W2OPY",
+            "image": "../src/img/cap.png",
+            "price": 10
+        }
+]
 }

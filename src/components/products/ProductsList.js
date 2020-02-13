@@ -3,11 +3,14 @@ import Item from './components/Item';
 import PropTypes from 'prop-types';
 
 class ProductsList extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
+    
+  constructor(props) {
+    super(props)
+    
+  }
 
     render() {
+
         return (
             <div className="products_list">
                 <h1 className="title">Shopping Cart</h1>
@@ -19,7 +22,7 @@ class ProductsList extends Component {
                     <div class="col-total">Total</div>
                     </li>
                 </ul>
-                <Item />
+                <Item productsList={this.props.productsList}/>
             </div>
         )
     }
