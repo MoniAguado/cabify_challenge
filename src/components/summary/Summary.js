@@ -8,8 +8,8 @@ class Summary extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Summary</h2>
+            <div className="summary">
+                <h1 className="title">Order Summary</h1>
             </div>
         )
     }

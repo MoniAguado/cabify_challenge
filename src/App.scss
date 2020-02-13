@@ -1,4 +1,82 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  outline: none;
 }
 
+.root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(./img/background.png);
+  background-color: #212240;
+  background-position: top left;
+  background-size: cover;
+  font-family: Avenir, "Avenir Next", "Segoe UI", sans-serif;
+  font-weight: regular;
+}
+
+.main_app {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 1088px;
+  max-height: 648px;
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
+  border-radius: 4px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  
+}
+
+.products_list {
+  flex: 1;
+  display: block;
+  padding: 40px 32px 40px 56px;
+}
+
+.summary {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px 32px;
+  width: 312px;
+  background-color: #f3f3f3;
+  color: #212240;
+}
+
+h1 {
+  position: relative;
+  letter-spacing: -0.18px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(33, 34, 64, 0.16);
+}
+
+.table_head {
+  position: relative;
+  width: 100%;
+  padding: 32px 0;
+  list-style: none;
+}
+
+.products-list_title {
+  color: #a6a7b3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}

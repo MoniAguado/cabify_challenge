@@ -12,11 +12,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">Cabify Challenge
-        </header>
-        <ProductsList />
-        <Summary />
+      <div className="root">
+        <div className="main_app">
+          <ProductsList />
+          <Summary />
+        </div>
       </div>
     );
   }

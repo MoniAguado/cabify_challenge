@@ -9,8 +9,16 @@ class ProductsList extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Products List</h2>
+            <div className="products_list">
+                <h1 className="title">Shopping Cart</h1>
+                <ul class="table_head">
+                    <li class="products-list_title row">
+                    <div class="col-product">Product details</div>
+                    <div class="col-quantity">Quantity</div>
+                    <div class="col-price">Price</div>
+                    <div class="col-total">Total</div>
+                    </li>
+                </ul>
                 <Item />
             </div>
         )
