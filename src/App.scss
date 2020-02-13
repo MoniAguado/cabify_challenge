@@ -54,6 +54,15 @@ h1 {
   line-height: 24px;
 }
 
+h2 {
+  color: #717285;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
 .title {
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(33, 34, 64, 0.16);
@@ -202,4 +211,87 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.summary_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(33, 34, 64, 0.16);
+}
+
+.summary_products_items {
+  margin-left: 4px;
+} 
+
+.summary_total_price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.summary_discounts {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(33, 34, 64, 0.16)
+}
+
+.discounts_list {
+  list-style: none;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.discount_type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
+}
+
+.discount_number {
+  font-weight: bold;
+}
+
+.summary_total {
+  width: 100%;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(33, 34, 64, 0.16);
+  color: #212240;
+}
+
+.summary_total_cost {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.summary_total_text {
+  font-size: 14px;
+  line-height: 17px;
+  flex-basis: 100%;
+  text-transform: uppercase;
+}
+
+.summary_total_price {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.summary_button {
+  margin-top: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border-radius: 4px;
+  background: #7350ff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 14px;
+  cursor: pointer;
 }
