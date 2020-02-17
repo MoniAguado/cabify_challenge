@@ -11,6 +11,8 @@ class App extends Component {
 
     this.state = {
       dataList: [],
+      inputValue: [0, 0, 0],
+  
     }
     
   }
@@ -23,18 +25,67 @@ class App extends Component {
     });
   }
 
+  handleInput = (event) => {
+    console.log('quiero mi numerito ' + this.state.inputValue)
+    this.setState({
+      inputValue: event.target.value
+      
+    });
+    
+  }
+
+  removeProduct = (item) => {
+    let newInputValue = this.state.inputValue
+    newInputValue[item] --
+    console.log('esto resta ' + this.state.inputValue)
+    this.setState({
+      inputValue: newInputValue
+    })
+  
+  }
+
+
+  addProduct = (item) => {
+    let newInputValue = this.state.inputValue
+    newInputValue[item] ++
+    console.log('newInputValue', this.state.inputValue)
+    console.log('esto suma ' + item)
+    this.setState({
+      inputValue: newInputValue
+    })
+  }
+
+
+
+  handleSubmit = (event) => {
+    console.log('el numerico se ha guardado: ' + this.state.inputValue);
+    event.preventDefault();
+    this.setState({
+      inputValue: this.state.inputValue
+    })
+  }
+
+
+
 
   render() {
 
     console.log('Lista', this.state.dataList)
-    const { dataList } = this.state
+    console.log('El numerico guardado: ' + this.state.inputValue)
+    const { dataList, inputValue } = this.state
 
 
     return (
       <div className="root">
         <div className="main_app">
           <ProductsList 
-          productsList={dataList}
+            productsList={dataList}
+            inputValue={inputValue}
+            handleInput={this.handleInput}
+            handleSubmit={this.handleSubmit}
+            removeProduct={this.removeProduct}
+            addProduct={this.addProduct}
+
           />
           <Summary />
         </div>
