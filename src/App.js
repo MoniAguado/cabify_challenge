@@ -36,26 +36,24 @@ class App extends Component {
 
   removeProduct = (item) => {
     let newInputValue = this.state.inputValue
-    newInputValue[item] --
+    if(this.state.inputValue[item] > 0) {
+      newInputValue[item] --
+      this.setState({
+        inputValue: newInputValue 
+      })
+    }
     console.log('esto resta ' + this.state.inputValue)
-    this.setState({
-      inputValue: newInputValue
-    })
   
   }
-
 
   addProduct = (item) => {
     let newInputValue = this.state.inputValue
     newInputValue[item] ++
-    console.log('newInputValue', this.state.inputValue)
-    console.log('esto suma ' + item)
+    console.log('esto suma', this.state.inputValue)
     this.setState({
       inputValue: newInputValue
     })
   }
-
-
 
   handleSubmit = (event) => {
     console.log('el numerico se ha guardado: ' + this.state.inputValue);
@@ -72,22 +70,29 @@ class App extends Component {
 
     console.log('Lista', this.state.dataList)
     console.log('El numerico guardado: ' + this.state.inputValue)
-    const { dataList, inputValue } = this.state
+    const { dataList, inputValue, showModal } = this.state
 
 
     return (
       <div className="root">
         <div className="main_app">
           <ProductsList 
-            productsList={dataList}
+            dataList={dataList}
             inputValue={inputValue}
             handleInput={this.handleInput}
             handleSubmit={this.handleSubmit}
             removeProduct={this.removeProduct}
             addProduct={this.addProduct}
 
+
           />
-          <Summary />
+          <Summary 
+            dataList={dataList}
+            inputValue={inputValue}
+          
+          />
+
+          
         </div>
       </div>
     );

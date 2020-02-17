@@ -19,7 +19,7 @@ class ProductsList extends Component {
                     </li>
                 </ul>
                 <Item
-                    productsList={this.props.productsList}
+                    dataList={this.props.dataList}
                     inputValue={this.props.inputValue}
                     handleInput={this.props.handleInput}
                     handleSubmit={this.props.handleSubmit}
