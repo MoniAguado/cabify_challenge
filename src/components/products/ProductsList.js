@@ -24,7 +24,8 @@ class ProductsList extends Component {
                     handleInput={this.props.handleInput}
                     handleSubmit={this.props.handleSubmit}
                     addProduct={this.props.addProduct}
-                    removeProduct={this.props.removeProduct}/>
+                    removeProduct={this.props.removeProduct}
+                    handleDetail={this.props.handleDetail}/>
             </div>
         )
     }

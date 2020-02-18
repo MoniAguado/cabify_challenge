@@ -4,21 +4,21 @@
             "id": 1,
             "name": "Shirt",
             "description": "Product code X7R2OPX",
-            "image": "/img/shirt.png",
+            "image": "/src/img/shirt.png",
             "price": 20
         },
         {
             "id": 2,
             "name": "Mug",
             "description": "Product code X2G2OPZ",
-            "image": "/img/mug.png",
+            "image": "/src/img/mug.png",
             "price": 5
         },
         {
             "id": 3,
             "name": "Cap",
             "description": "Product code X3W2OPY",
-            "image": "/img/cap.png",
+            "image": "/src/img/cap.png",
             "price": 10
         }
 ]

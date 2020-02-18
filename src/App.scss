@@ -143,6 +143,12 @@ h2 {
   border-radius: 4px;
 }
 
+.button_detail {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .item_text {
   display: flex;
   flex-direction: column;
@@ -294,4 +300,90 @@ h2 {
   font-weight: bold;
   line-height: 14px;
   cursor: pointer;
+}
+
+.main_detail {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #212240;
+  opacity: 0.7;
+  background-position: top left;
+  background-size: cover;
+}
+
+.box_info_detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 500px;
+  max-height: 300px;
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
+  border-radius: 4px;
+  background-color: #ffffff;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+.detail_flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.detail_image {
+  margin-right: 16px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #cacad1;
+  border-radius: 4px;
+}
+
+.detail_info {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px 32px;
+  width: 200px;
+  height: 200px;
+  background-color: #f3f3f3;
+  color: #212240;
+}
+
+.button_close {
+  position: absolute;
+  margin-left: 430px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.detail_name {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #7350ff;
+}
+
+.detail_description {
+  border-radius: 4px;
+  color: #a6a7b3;
+  letter-spacing: 0.13px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.detail_price {
+  width: 100%;
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(33, 34, 64, 0.16);
+  color: #212240;
 }

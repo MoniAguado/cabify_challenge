@@ -15,11 +15,18 @@ class Item extends Component {
                     {this.props.dataList.map( (item, index) => ( 
                         <li className="item_product" >
                             <div className="item_description item">
-                                <div className="product_image"><img src={item.image} alt="Product Image"/></div>
-                                <div className="item_text">
-                                    <div className="product_name">{item.name}</div>
-                                    <div className="product_description">{item.description}</div>
-                                </div>
+                                
+                                    <div className="product_image">
+                                        <button className="button_detail"
+                                            onClick={() => this.props.handleDetail(item)}>
+                                            <img src={item.image} alt="Product Image"/>
+                                        </button>
+                                    </div>
+                                    <div className="item_text">
+                                        <div className="product_name">{item.name}</div>
+                                        <div className="product_description">{item.description}</div>
+                                    </div>
+                                
                             </div>
                             <form
                                 className="item_quantity item"

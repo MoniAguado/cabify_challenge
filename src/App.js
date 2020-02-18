@@ -2,6 +2,7 @@ import React, { Component}  from 'react';
 import getData from './api/Api';
 import ProductsList from './components/products/ProductsList';
 import Summary from './components/summary/Summary';
+import Detail from './components/detail/Detail';
 import './App.scss';
 
 class App extends Component {
@@ -12,6 +13,8 @@ class App extends Component {
     this.state = {
       dataList: [],
       inputValue: [0, 0, 0],
+      itemSelected: {},
+      showDetail: false,
   
     }
     
@@ -31,7 +34,6 @@ class App extends Component {
       inputValue: event.target.value
       
     });
-    
   }
 
   removeProduct = (item) => {
@@ -63,14 +65,22 @@ class App extends Component {
     })
   }
 
+  handleDetail = (item) => {
+    this.setState({ 
+      itemSelected: item,
+      showDetail: true
+    })
+  }
 
-
+  handleCloseDetail = () => {
+    this.setState({ showDetail: false})
+  }
 
   render() {
 
     console.log('Lista', this.state.dataList)
     console.log('El numerico guardado: ' + this.state.inputValue)
-    const { dataList, inputValue, showModal } = this.state
+    const { dataList, inputValue, itemSelected } = this.state
 
 
     return (
@@ -83,6 +93,7 @@ class App extends Component {
             handleSubmit={this.handleSubmit}
             removeProduct={this.removeProduct}
             addProduct={this.addProduct}
+            handleDetail={this.handleDetail}
 
 
           />
@@ -92,8 +103,14 @@ class App extends Component {
           
           />
 
+         
           
         </div>
+        {this.state.showDetail && (
+            <Detail 
+              itemSelected={itemSelected}
+              handleCloseDetail={this.handleCloseDetail}/>
+          )}
       </div>
     );
   }
