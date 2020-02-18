@@ -175,14 +175,20 @@ h2 {
   margin-right: 16px;
   width: 72px;
   height: 72px;
-  border: 1px solid #cacad1;
-  border-radius: 4px;
 }
 
 .button_detail {
   border: none;
   background: none;
   cursor: pointer;
+  padding: 0;
+}
+
+.image_path {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #cacad1;
+  border-radius: 4px;
 }
 
 .item_text {
@@ -393,8 +399,13 @@ h2 {
   margin-right: 16px;
   width: 200px;
   height: 200px;
-  border: 1px solid #cacad1;
-  border-radius: 4px;
+}
+
+.img_detail_path {
+  width: 200px;
+    height: 200px;
+    border: 1px solid #cacad1;
+    border-radius: 4px;
 }
 
 .detail_info {

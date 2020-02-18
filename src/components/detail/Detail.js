@@ -12,7 +12,12 @@ class Detail extends Component {
             <div className="main_detail"></div>
                 <div className="box_info_detail">
                     <div className="detail_flex">
-                        <div className="detail_image"><img src={this.props.itemSelected.image} alt="Product Image"/></div>
+                        <div className="detail_image">
+                            <img
+                                src={require(`../../img/${this.props.itemSelected.image}`)}
+                                alt="Product Detail Image"
+                                className="img_detail_path"/>
+                        </div>
                         <div className="detail_info">
                             <div className="detail_name">{this.props.itemSelected.name}</div>
                             <div className="detail_description">{this.props.itemSelected.description}</div>
