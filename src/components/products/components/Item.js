@@ -28,34 +28,36 @@ class Item extends Component {
                                     </div>
                                 
                             </div>
-                            <form
-                                className="item_quantity item"
-                                onSubmit={this.props.handleSubmit}>
-                                <button
-                                    className="button_minus button_quantity"
-                                    onClick= {() => this.props.removeProduct(index)}>-
-                                </button>
-                                <input
-                                    type="value"
-                                   value={this.props.inputValue[index]} 
-                                    className="input_quantity"
-                                    placeholder="0"
-                                    onChange={this.props.handleInput}
-                                    onSubmit={this.props.handleSubmit}
-                                    >
-                                </input>
-                                <button
-                                    className="button_plus button_quantity"
-                                    onClick={() => this.props.addProduct(index)}>+
-                                </button>
-                            </form>
-                            <div className="item_price item">
-                                <span className="price_number">{item.price}</span>
-                                <span className="price_currency">€</span>
-                            </div>
-                            <div className="item_total item">
-                                <span className="price_number">{this.props.inputValue[index] * item.price}</span>
-                                <span className="price_currency">€</span>
+                            <div className="box_numbers_item">
+                                <form
+                                    className="item_quantity item"
+                                    onSubmit={this.props.handleSubmit}>
+                                    <button
+                                        className="button_minus button_quantity"
+                                        onClick= {() => this.props.removeProduct(index)}>-
+                                    </button>
+                                    <input
+                                        type="value"
+                                    value={this.props.inputValue[index]} 
+                                        className="input_quantity"
+                                        placeholder="0"
+                                        onChange={this.props.handleInput}
+                                        onSubmit={this.props.handleSubmit}
+                                        >
+                                    </input>
+                                    <button
+                                        className="button_plus button_quantity"
+                                        onClick={() => this.props.addProduct(index)}>+
+                                    </button>
+                                </form>
+                                <div className="item_price item">
+                                    <span className="price_number">{item.price}</span>
+                                    <span className="price_currency">€</span>
+                                </div>
+                                <div className="item_total item">
+                                    <span className="price_number">{this.props.inputValue[index] * item.price}</span>
+                                    <span className="price_currency">€</span>
+                                </div>
                             </div>
                         </li>
                         )
